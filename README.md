@@ -1,0 +1,1 @@
+This is a Change Calculator program from the web102 course, in which you take in the amount paid and amount recieved, and are displayed the number of dollars and coins required to make up the change due.
