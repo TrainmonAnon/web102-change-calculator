@@ -86,11 +86,11 @@ describe('Change Calculator', function () {
         }))
         .end()
         .then(change => {
-          expect(change.dollars).to.equal('9', 'Expected dollars didn\'t match');
-          expect(change.quarters).to.equal('3', 'Expected quarters didn\'t match');
-          expect(change.dimes).to.equal('0', 'Expected dimes didn\'t match');
-          expect(change.nickels).to.equal('0', 'Expected nickels didn\'t match');
-          expect(change.pennies).to.equal('4', 'Expected pennies didn\'t match');
+          expect(change.dollars).to.contain('9', 'Expected dollars didn\'t match');
+          expect(change.quarters).to.contain('3', 'Expected quarters didn\'t match');
+          expect(change.dimes).to.contain('0', 'Expected dimes didn\'t match');
+          expect(change.nickels).to.contain('0', 'Expected nickels didn\'t match');
+          expect(change.pennies).to.contain('4', 'Expected pennies didn\'t match');
         });
     });
 
@@ -110,11 +110,11 @@ describe('Change Calculator', function () {
         }))
         .end()
         .then(change => {
-          expect(change.dollars).to.equal('6', 'Expected dollars didn\'t match');
-          expect(change.quarters).to.equal('2', 'Expected quarters didn\'t match');
-          expect(change.dimes).to.equal('1', 'Expected dimes didn\'t match');
-          expect(change.nickels).to.equal('1', 'Expected nickels didn\'t match');
-          expect(change.pennies).to.equal('1', 'Expected pennies didn\'t match');
+          expect(change.dollars).to.contain('6', 'Expected dollars didn\'t match');
+          expect(change.quarters).to.contain('2', 'Expected quarters didn\'t match');
+          expect(change.dimes).to.contain('1', 'Expected dimes didn\'t match');
+          expect(change.nickels).to.contain('1', 'Expected nickels didn\'t match');
+          expect(change.pennies).to.contain('1', 'Expected pennies didn\'t match');
         });
     });
   });

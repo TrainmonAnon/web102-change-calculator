@@ -3,24 +3,54 @@
   <head>
     <meta charset="utf-8">
     <title>Change Calculator</title>
+    <link 
+      rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"
+    >
   </head>
   <body>
     <!-- Write your markup here -->
-    <h1>Change Calculator</h1>
-    <input id = "amount-due" />
-    <input id = "amount-received" />
-    <button id = "calculate-change">Calculate change</button>
-    <img src = "images/dollar.png">
-    <p id = "dollars-output">0</p>
-    <img src = "images/quarter.jpg">
-    <p id = "quarters-output">0</p>
-    <img src = "images/dime.jpg">
-    <p id = "dimes-output">0</p>
-    <img src = "images/nickel.jpg">
-    <p id = "nickels-output">0</p>
-    <img src = "images/penny.jpg">
-    <p id = "pennies-output">0</p>
-    <!-- Don't forget to add your <script> tag here -->
-    <script src = "main.js"></script>
+    <div class="container">
+      <h1 class="jumbotron text-center">Change Calculator</h1>
+      <div class='card'>
+        <div class='row card-body align-items-end'>
+          <div class='col-centered'>
+            <p>Amount Due</p>
+            <input id="amount-due" type="number" step=.01 min=0 />
+          </div>
+          <div class='col-centered'>
+              <p>Amount Received</p>
+              <input id="amount-received" type="number" step=.01 min=0 />
+          </div>
+          <div class='col-centered'>
+              <button id="calculate-change">Calculate change</button>
+          </div>
+        </div>
+      </div>
+      <div class='row text-center'>
+        <div class='col'>
+          <img src="images/dollar.png" class="img-fluid" width="200" height="200" />
+          <p id="dollars-output" class='well'>0 Dollars</p>
+        </div>
+        <div class='col'>
+          <img src="images/quarter.jpg" class="img-fluid rounded-circle" width="200" height="200" />
+          <p id="quarters-output">0 Quarters</p>
+        </div>
+        <div class='col'>
+          <img src="images/dime.jpg" class="img-fluid rounded-circle" width="200" height="200" />
+          <p id="dimes-output">0 Dimes</p>
+        </div>
+        <div class='col'>
+          <img src="images/nickel.jpg" class="img-fluid rounded-circle" width="200" height="200" />
+          <p id="nickels-output">0 Nickels</p>
+        </div>
+        <div class='col'>
+          <img src="images/penny.jpg" class="img-fluid rounded-circle" width="200" height="200" />
+          <p id="pennies-output">0 Pennies</p>
+        </div>
+      </div>
+    </div>
+      <!-- Don't forget to add your <script> tag here -->
+        <script src = "main.js"></script>
   </body>
 </html>
